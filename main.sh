@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
-read -r project
-read -r version
-echo "${project}_v${version}.tar"
-echo "${project}_v${version}/"
+read -r seconds
+
+hours=$((seconds/3600))
+left=$((seconds%3600))
+minutes=$((left/60))
+sleft=$((left%60))
+
+
+echo "${hours}h ${minutes}m ${sleft}s"
